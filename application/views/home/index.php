@@ -1,11 +1,11 @@
 <fieldset>
 <div class="judul">
-<h1 class="judul">SIMPLE LAPOR!</h1>
+<h1 class="judul">LAPOR in AJA!</h1>
 </div>
 <form action="" method="post">
 <form>
     <input class="search" type="text" name="keyword" id="keyword"  placeholder="Cari..." required>
-    <input class="button" type="button" value="Cari">		
+    <a href="<?=base_url()?>"><i class="fas fa-search" style=" padding:0px; height: 20px; font-size:30px; width: 50px;"></i></a>	
 </form>
 </form>
 <?php if($this->session->flashdata('flash')):?>
@@ -18,7 +18,7 @@
 </div>
 
 <div class="tulisan">
-<p>laporan/komentar terakhir</p>
+<p>Laporan/Komentar Terakhir</p>
 </div>
 <hr />
 <div class="tulisan2">

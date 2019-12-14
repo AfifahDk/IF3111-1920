@@ -5,10 +5,14 @@
 </head>
 <body>
 <fieldset>    
-        <h1 class="judul">SIMPLE LAPOR !</h1>
+        <h1 class="judul">LAPOR in AJA!</h1>
 <?= validation_errors();?>
 <div class="tambah">
 <form action="" method="post" enctype="multipart/form-data"> 
+
+    <p>Silahkan ketikkan laporan/komentar yang ingin anda ajukan</p>
+    <p>Laporan/komentar dapat berupa pernyataan atau pertanyaan, dan hanya dapat dilakukan berdasarkan aspek-aspek dibawah ini</p>
+    <hr/>
     <label for="lapor">Buat Laporan/Komentar</label></br>
     <hr />             
     <!--Laporan/Komentar-->
@@ -49,9 +53,9 @@
         <div class="tombol">
             <input type="submit" name="tambah" value="Buat LAPOR!">
         </div>
+        <hr />
   
  </form>
  </div>
-<hr />
 </fieldset>
 </body>

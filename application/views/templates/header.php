@@ -13,5 +13,7 @@
   <li class="navbar"><a class="navbar"class="active" title="home" href="<?= base_url();?>home/index"><i class="fa fa-home" aria-hidden="true" style=" margin: 20px; height: 60px; font-size:40px; width: 60px;"></i></a></li>
   <li class="navbar"><a class="navbar"class="active" title="about" href="<?= base_url();?>data/about"><i class="fas fa-address-card" aria-hidden="true" style=" margin: 20px; font-size:40px; height: 60px; width: 60px;"></i></a></li>
   <li class="navbar"><a class="navbar"class="active" title="lapor" href="<?= base_url();?>data/detail"><i class="fas fa-archive"style=" margin: 20px;height: 60px; font-size:40px; width: 60px;"></i></a></li>
+  <li class="navbar2"><a class="navbar2"class="active" title="no-user" href="<?= base_url();?>"><i class="fas fa-user-slash" style=" height: 60px; margin-right: 20px; margin: 20px; font-size:40px; width: 60px;"></i></a></li>
 </ul>
 </div>
+
