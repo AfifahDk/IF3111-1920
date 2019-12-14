@@ -5,15 +5,17 @@
 </head>
 <body>
 <fieldset>    
-        <h1 class="judul">LAPOR in AJA!</h1>
-<div class="container">
-    <label>Buat Laporan/Komentar</label></br>
+        <h1 class="judul">SIMPLE LAPOR !</h1>
+<?= validation_errors();?>
+<div class="tambah">
+<form action="" method="post" enctype="multipart/form-data"> 
+    <label for="lapor">Buat Laporan/Komentar</label></br>
     <hr />             
     <!--Laporan/Komentar-->
-    <textarea class="komentar" placeholder="Laporan/Komentar"></textarea>
+    <textarea name="lapor" id="lapor" placeholder="Laporan/Komentar" row="10" cols="100"></textarea>
     <br><br>
     <div class="aspek">
-        <select name="aspek">
+        <select id="aspek" name="aspek">
             <option>Pilih Aspek Pelaporan/Komentar</option>
             <option>Administrasi</option>
             <option>Biaya Iuran</option>
@@ -38,15 +40,18 @@
             <option>Situasi Khusus</option>
             <option>Kebencanaan</option>
         </select>
+        </select>
     </div>
-    <br>
-    <form action="aksi.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="file"><br>
-        <div class="submit">
-            <input type="submit" name="upload" value="Buat LAPOR!">
+        <div class="upload">
+        <input type="file" name="gambar" id="gambar">
         </div>
-    </form>
-    <hr />
-</div>
+        <br>
+        <div class="tombol">
+            <input type="submit" name="tambah" value="Buat LAPOR!">
+        </div>
+  
+ </form>
+ </div>
+<hr />
 </fieldset>
 </body>

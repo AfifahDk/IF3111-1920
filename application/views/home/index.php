@@ -1,39 +1,38 @@
 <fieldset>
 <div class="judul">
-<h1>LAPOR in Aja!</h1>
+<h1 class="judul">SIMPLE LAPOR!</h1>
 </div>
 <form action="" method="post">
 <form>
-    <input class="search" type="text" placeholder="Cari..." required>
+    <input class="search" type="text" name="keyword" id="keyword"  placeholder="Cari..." required>
     <input class="button" type="button" value="Cari">		
 </form>
 </form>
-</div>
 <?php if($this->session->flashdata('flash')):?>
-	<div>Data <strong> laporan <strong>berhasil</strong> ditambahkan!<?= $this->session->flashdata('flash');?>
-	</div>
+<div>Data <strong>berhasil</strong> ditambahkan!<?= $this->session->flashdata('flash');?>
+</div>
 <?php endif;?>
 <br>
-<div class="tambah">
-	<a href="<?=base_url()?>data/tambah">Buat Laporan/Komentar<i class="fas fa-plus"  style=" height: 20px; width: 25px;"></i></a>
+<div class="buat">
+<a href="<?=base_url()?>data/tambah">Buat Laporan/Komentar<i class="fas fa-plus"  style=" height: 20px; width: 25px;"></i></a>
 </div>
 
-<div class="komentar">
-	<p>laporan/komentar terakhir</p>
+<div class="tulisan">
+<p>laporan/komentar terakhir</p>
 </div>
-	<hr />
-<div class="komentar2">
+<hr />
+<div class="tulisan2">
 <div class="newshead">
-	<ul class="detail">
-<?php foreach($lapor as $rows):?>
-<?= $rows['lapor'].' ';?>
+<ul class="detail">
+<?php foreach($lapor as $dt):?>
+<?= $dt['lapor'].' ';?>
 <br>
-<?= $rows['aspek'].' ';?>
-<?= $rows['gambar'].' ';?>
-<?= $rows['waktu'].' ';?>
+<?= $dt['aspek'].' ';?>
+<?= $dt['gambar'].' ';?>
+<?= $dt['waktu'].' ';?>
 <li class="detail">
 	
-	<a href="<?=base_url()?>data/detail/<?=$dt['id']; ?>">Lihat Selengkapnya &rarr;</a>
+	<a href="<?=base_url()?>data/detail/<?=$dt['id']; ?>">Lihat Selengkapnya...</a>
 
 </li>
 <br>
@@ -41,5 +40,4 @@
 </ul>
 </div>
 </div>
-<hr />
 </fieldset>

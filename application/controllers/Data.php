@@ -18,13 +18,22 @@ class Data extends CI_Controller{
 		$this->load->view('data/index',$data);
 		$this->load->view('templates/footer');
 	}
+	public function about(){
+
+		$data['judul']='Data';
+		$data['lapor']=$this->Data_model->getDataLapor();
+		$this->load->view('templates/header',$data);
+		$this->load->view('data/about',$data);
+		$this->load->view('templates/footer');
+	}
 
 	public function tambah(){
 
 		$data['judul']='tambah data lapor';
+
 		$this->form_validation->set_rules('lapor','Lapor','required');
 		$this->form_validation->set_rules('aspek','Aspek','required');
-		//$this->form_validation->set_rules('gambar','gambar','required');
+		// $this->form_validation->set_rules('gambar','gambar','required');
 		if($this->form_validation->run()==FALSE){
 		$this->load->view('templates/header',$data);
 		$this->load->view('data/tambah');
@@ -107,5 +116,6 @@ class Data extends CI_Controller{
 		//$this->session->set_flashdata('flash','Ditambahkan');
 		redirect('home');
 	}
+	
 }
 }
